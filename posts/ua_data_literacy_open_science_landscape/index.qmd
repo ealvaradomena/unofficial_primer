@@ -1,0 +1,101 @@
+---
+title: "UA's Data Literacy and Open Science Landscape"
+author: "Edwin Alvarado-Mena"
+date: "2024-11-16"
+categories: [data literacy, open science, UA]
+image: "image.jpg"
+---
+
+![[Photo: Dean Kelly/SkyPod Images]{.smallcaps}](image.jpg){fig-align="center" width="600"}
+
+Being a first-year PhD student is not the easiest. You will have to learn lots of new stuff, and it is OK to feel anxious about it.
+
+It is sensible to invest serious time in honing your programming skills. Solid fluency in R or Python can make your doctoral journey way more pleasant. 
+
+But programming is not the only flank you have to protect in the years to come. There are many other technicalities that you must pick up very quickly.
+
+You will hear about {{< latex >}}. Many of your prospective co-authors write their manuscripts in {{< latex >}}, so you will suffer the misery of rendering {{< latex >}} documents with no previous knowledge of it...
+
+You will hear about GitHub. Version control tools are a must for collaborative work, so you will grapple with the arcane GitHub commands... 
+
+You will hear about the Unix shell. Advanced tasks like interacting with UA's High Performance Computing (HPC) demand some computational dexterity, so you will need to master how humans communicate with computers...
+
+Where to start?
+
+# Open Science
+
+Everything mentioned above pertains to Open Science, a hugely relevant paradigm in scientific research. The sooner you learn about it, the better.
+
+I pretty much like the definition coined by Jeffrey Gillan (UA's Data Science Institute):\
+
+> "A series of reforms that interrogate every step in the research life cycle to make it more efficient, powerful and accountable in our emerging digital society."
+
+So Open Science interrogates the way we do science. UNESCO's definition is way wordier but points in the same direction:
+
+> "Open Science is defined as an inclusive construct that combines various movements and practices aiming to make multilingual scientific knowledge openly available, accessible and reusable for everyone, to increase scientific collaborations and sharing of information for the benefits of science and society, and to open the processes of scientific knowledge creation, evaluation and communication to societal actors beyond the traditional scientific community."
+
+In a nutshell, we, scientists, do science... But we do a very particular type of science: reproducible science.
+
+Reproducibility means that our data and code are accessible, transparent, and executable. Importantly, reproducibility allows others to fully replicate our work's results.
+
+We do not merely publish our research. Rather, we share all the research materials and clearly document how we used them.
+
+Of course, Open Science does not happen by accident. We must take very purposeful actions in numerous realms. 
+
+**We must excel at documentation.** Our code must be well-annotated and cover each step leading to our conclusions. We must also provide guidelines for code execution. Open-source applications like [OSF](https://osf.io/institutions/ua/) are great documentation tool options. In the context of [GitHub](https://github.com/) repositories, a README file should be included with a detailed overview of the project workflow.
+
+**We must excel at project management.** Our code must be contained in a GitHub repository with version control functionality, and we must share every necessary input to execute the code. Project management includes data management. UA provides access to the [DMPTool](https://dmptool.org/) to write data management plans following funding agencies' requirements.
+
+**We must excel at data infrastructure.** Our data and other research materials must be accessible through appropriate digital storage platforms; any third person should understand how the raw data turns into research outputs. The conditions for gathering, sharing, and archiving data must be precise. Moreover, the data must be findable, accessible, interoperable, and reusable (see: [FAIR Principles](https://www.go-fair.org/fair-principles/)). UA's official repository is known as [ReDATA](https://data.library.arizona.edu/supported-platforms/redata).
+
+**We must excel at communication.** Our publications should follow the best practices and standards in scientific writing. [Overleaf](https://www.overleaf.com/) is an online {{< latex >}} editor for collaborative and real-time writing. [Quarto](https://quarto.org/) allows you to combine formatted text, code, code output, {{< latex >}} conventions, and references.
+
+# UA's excellent data literacy ecosystem
+
+As I said at the beginning, you will have to learn lots of new stuff in the coming years!
+
+The good news is that UA's ecosystem supplies so many opportunities to hone your computational talents and engage with folks doing very cool stuff in "this R1 institution that, quite literally, puts things into space" (as Professor Peter A. Jansen says).
+
+Here are my top recommendations to make the most of the UA's Open Science and Data Literacy landscape:
+
+### Take advantage of University Libraries' Data Cooperative
+
+University Libraries' [Data Cooperative](https://data.library.arizona.edu/) organizes weekly workshops during the semester. These lovely workshops cover everything from introductory programming to machine learning methods, from data management to data visualization. Plus, Jeff Olivier, the instructor of the R workshops instructor, is such a great guy.
+
+The Data Cooperative holds open office hours, where you can bring that ugly line of code that is not running, and organizes workshops about supported platforms such as the DMPTool, OSF, and ReDATA, which I mentioned previously. Upcoming events, [here](https://data.library.arizona.edu/news-events).
+
+### Attend Data Science Institute's events
+
+Consider subscribing to the Data Science Institute's [email list](https://datascience.arizona.edu/get-involved/overview). It is simply the best channel for information about data science events held across the campus. Have a look at the [calendar](https://datascience.arizona.edu/calendar)!
+
+The Data Science Institute also has an official newsletter, [The Data Drip](https://datascience.arizona.edu/news/data-drip-august-2024), and leads great outreach projects such as Data Science Ambassadors, Data Science Fellows, or Roots for Resilience.
+
+### Get in touch with Data Science Ambassadors
+
+It is likely that the College of Social & Behavioral Sciences has a [Data Science Ambassador](https://datascience.arizona.edu/dsa) who can provide assistance with programming. You can make an appointment at any time.
+
+Once you have gained some experience, nominate yourself to be the Data Science Ambassador.
+
+### Have a look at Kelsey Gonzalez's R programming course
+
+Sociologist Kelsey Gonzalez earned her PhD at UA. A former Data Science Ambassador, she is now a Lead Data Scientist and AI Product Manager in the Chief Analytics Office at IBM, demonstrating that social scientists can land excellent jobs in the data science industry. 
+
+Furthermore, PhD Kelsey Gonzalez developed an excellent course in [R programming with Tidyverse](https://www.youtube.com/watch?v=6NWGyucolTI&list=PL6FsZxVq54ERrlMRNE5aq2qUFH042fbuM). It is free and available on YouTube. You definitely want to have a look!
+
+### Exploit UA's education partnerships
+
+The Data Science Ambassadors program gives you access to the [Carpentries Instructor Certification](https://carpentries.org/instructor-training/). The Roots for Resilience program gives you access to the [Foundational Open Science Skills (FOSS)](https://foss.cyverse.org/) workshop series.
+
+These education partnerships are a massive asset! Take advantage of it!
+
+### Pursue the Computational Social Science Graduate Certificate
+
+Taking courses beyond the SGPP will give you a stronger background. It is not to say that our methods classes are bad. Quite the opposite, our methods sequence is pretty good and provides you with the foundations to take courses in computer science, geography, statistics, and so on.
+
+The [Computational Social Science Graduate Certificate](https://css.arizona.edu/) is a great way to turn all those credits into a nice addition to your CV. Pursue it.
+
+### Master the High Performance Computing
+
+UA has enormous computational power. Some restrictions observed, we can run jobs in the [High Performance Computing](https://uarizona.atlassian.net/wiki/spaces/UAHPC/overview). This infrastructure is nothing to sneeze at. Use it to leverage your work.
+
+There is a very good collection of [videos](https://uarizona.atlassian.net/wiki/spaces/UAHPC/pages/75989137/Training#Training-WorkshopsandSchedule) that will introduce you to UA's supercomputers.

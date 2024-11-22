@@ -2,18 +2,36 @@ project:
   type: website
 
 website:
-  title: "unofficial_primer"
+  title: "SGPP's —Unofficial— Primer on Data Literacy and Open Science"
+  page-footer: 
+    left: |
+      Copyright 2024, Edwin Alvarado-Mena
+    center: |
+      <span class="faux-block">All content licensed under<br>[{{< fa brands creative-commons >}} {{< fa brands creative-commons-by >}} {{< fa brands creative-commons-sa >}} Creative Commons CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)</span>    
+    right: |
+      <span class="faux-block">Made with {{< fa brands r-project >}} and [Quarto](https://quarto.org/)</span>
   navbar:
+    background: "black"
+    foreground: "white"
+    pinned: true
     right:
       - about.qmd
+      - index.qmd
       - icon: github
-        href: https://github.com/
-      - icon: twitter
-        href: https://twitter.com
+        href: https://github.com/ealvaradomena/unofficial_primer
 format:
   html:
-    theme: cosmo
+    theme: [simplex, theme.scss]
     css: styles.css
+    code-block-bg: "#d5ebf7" # code block background
+    code-block-border-left: "white" # code block border
+    code-line-numbers: true
+    code-copy: true
+    fig-cap-location: margin
+    reference-location: margin
+    citation-location: margin
+    title-block-banner: "#0f52ba"
+    title-block-banner-color: "white"
 
 editor: visual
 

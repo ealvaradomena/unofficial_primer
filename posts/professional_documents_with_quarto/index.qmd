@@ -1,0 +1,103 @@
+---
+title: "Rendering professional documents with Quarto"
+author: "Edwin Alvarado-Mena"
+date: "2024-11-15"
+categories: [Quarto, code, LaTeX]
+image: "image.jpg"
+---
+
+![[Photo: Bob Demers/UA News]{.smallcaps}](image.jpg){fig-align="center" width="600"}
+
+Producing high-quality documents and reports is of paramount importance.
+
+Methods courses' assignments are especially tricky as you have to combine plain text, code, and results.
+
+Even if you are not minoring in methods, you must take a few statistics courses along your doctoral journey.
+
+In general, instructors will expect to see, say, a table with regression coefficients and other statistics. You must also discuss your data, methods, and findings.
+
+OK. You will then look for a text editor. Microsoft Word or Google Docs may be your immediate options.
+
+So, you create a new document, write some paragraphs about the research design, and insert screenshots of the relevant figures and tables. 
+
+Screenshots, however, do not look very professional...
+
+To make things worse, instructors will also want to see code. Technical questions will be asked. How did you wrangle the data? How did you fit the models?
+
+Therefore, you must showcase your code.
+
+Once again, you might be tempted to take screenshots of RStudio and insert them into the document.
+
+Screenshots, however, do not look very professional...
+
+We need better solutions for scientific writing than Microsoft Word or Google Docs.
+
+# A model Quarto document
+
+Luckily, we have Quarto!
+
+Quarto is an open-source tool for scientific publishing. Quarto documents can combine plain text, code, and code output. No need for screenshots!
+
+Quarto documents can be rendered to multiple formats, including PDF, which makes them great for assignments.
+
+You can create Quarto documents in RStudio by clicking *File* \> *New File* \> *Quarto Document*.
+
+Thus, RStudio will open a Quarto document where you can write, program, and render to a professionally-looking PDF document.
+
+You will see YAML metadata at the top of the Quarto document that you can modify at will. This metadata provides a lot of room for customization.
+
+To make things easier, I have granted you access to a GitHub repository with [a model Quarto document](https://github.com/ealvaradomena/class_repo) ready to be rendered into PDF format. Feel free to use this repository as a model for your grad school work.
+
+Notice that the repository follows the guidelines for working directory organization that I listed in another blog post.
+
+As you will see in the model repository, cool things about Quarto include printing code and code output, including references, and inserting {{< latex >}} math.
+
+# R vs Python? Why not both!
+
+You can even combine R and Python chunks! Have a look:
+
+```{r}
+## This is R
+toupper("hola")
+```
+
+::: callout-important
+## Install package
+
+You must install and load the `reticulate` package prior to running Python code: `library(reticulate)`.
+
+```{r include=F, message=F, warning=F}
+library(reticulate)
+```
+:::
+
+```{python}
+## This is Python
+"hola".upper()
+```
+
+Furthermore, you can call objects from an R environment while programming in a Python chunk, and vice-versa, which means that you can build "bilingual" workflows:
+
+```{r}
+## This is R
+string <- "hola"
+```
+
+```{python}
+## This is Python calling an object from the R environment
+r.string.upper()
+```
+
+In Quarto, you can switch between R and Python, making the most of both languages. This feature is truly awesome! It dramatically enhances productivity.
+
+Let us say that your data-wrangling skills are quite good in R because of your mastery of the `dplyr` package. It may be that you are working on a project that requires Natural Language Processing libraries that exist in Python only. There is no need to make tough decisions. Quarto lets you use both!
+
+# Other uses
+
+Of course, you can render fancy documents in Quarto even if equations or coding are not involved.
+
+You could write your comprehensive examination or your prospectus in Quarto, and those documents will have a unique look that speaks volumes about your professionalization (trust me, demonstrating professionalization is critical in grad school!).
+
+You could create your personal website in Quarto. Actually, this blog is made with Quarto. The [GitHub repository](https://github.com/ealvaradomena/unofficial_primer) is public, so feel free to fork it!
+
+There is a detailed user guide to Quarto. You can visit it [here](https://quarto.org/). If you have questions about Quarto's many functionalities, this is the first place you should look. 
