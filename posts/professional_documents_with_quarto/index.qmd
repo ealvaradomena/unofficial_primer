@@ -48,7 +48,7 @@ You will see YAML metadata at the top of the Quarto document that you can modify
 
 To make things easier, I have granted you access to a GitHub repository with [a model Quarto document](https://github.com/ealvaradomena/class_repo) ready to be rendered into PDF format. Feel free to use this repository as a model for your grad school work.
 
-Notice that the repository follows the guidelines for working directory organization that I listed in another blog post.
+Notice that the repository follows the guidelines for working directory organization that I listed in another [blog post](https://unofficialprimer.netlify.app/posts/how_to_organize_your_computer/).
 
 As you will see in the model repository, cool things about Quarto include printing code and code output, including references, and inserting {{< latex >}} math.
 

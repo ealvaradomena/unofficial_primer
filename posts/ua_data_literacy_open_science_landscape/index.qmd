@@ -48,7 +48,7 @@ Of course, Open Science does not happen by accident. We must take very purposefu
 
 **We must excel at data infrastructure.** Our data and other research materials must be accessible through appropriate digital storage platforms; any third person should understand how the raw data turns into research outputs. The conditions for gathering, sharing, and archiving data must be precise. Moreover, the data must be findable, accessible, interoperable, and reusable (see: [FAIR Principles](https://www.go-fair.org/fair-principles/)). UA's official repository is known as [ReDATA](https://data.library.arizona.edu/supported-platforms/redata).
 
-**We must excel at communication.** Our publications should follow the best practices and standards in scientific writing. [Overleaf](https://www.overleaf.com/) is an online {{< latex >}} editor for collaborative and real-time writing. [Quarto](https://quarto.org/) allows you to combine formatted text, code, code output, {{< latex >}} conventions, and references.
+**We must excel at communication.** Our publications should follow the best practices and standards in scientific writing. [Overleaf](https://www.overleaf.com/) is an online {{< latex >}} editor for collaborative and real-time writing. [Quarto](https://quarto.org/) allows you to combine formatted text, code, code output, {{< latex >}} conventions, and references. Read my [blog post](https://unofficialprimer.netlify.app/posts/professional_documents_with_quarto/) on Quarto documents.
 
 # UA's excellent data literacy ecosystem
 
@@ -56,7 +56,7 @@ As I said at the beginning, you will have to learn lots of new stuff in the comi
 
 The good news is that UA's ecosystem supplies so many opportunities to hone your computational talents and engage with folks doing very cool stuff in "this R1 institution that, quite literally, puts things into space" (as Professor Peter A. Jansen says).
 
-Here are my top recommendations to make the most of the UA's Open Science and Data Literacy landscape:
+Here are my top recommendations to make the most of the UA's Data Literacy and Open Science landscape:
 
 ### Take advantage of University Libraries' Data Cooperative
 
