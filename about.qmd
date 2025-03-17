@@ -17,14 +17,14 @@ So you have been admitted to UA's School of Government and Public Policy (SGPP).
 
 **SGPP's—Unofficial—Primer on Data Literacy and Open Science** has posts covering three fundamental areas that you must master as a PhD student:
 
-1.  Organizing the computer conveniently to work with data and version control applications (e.g., GitHub).
+1.  Organizing the computer to work with data and version control applications (e.g., GitHub).
 
 2.  Rendering professional documents in Quarto, including references, equations, code, visualizations, etc.
 
 3.  Navigating UA's Data Literacy and Open Science landscape.
 
-You want to develop these skills as soon as possible. Trust me. They will make your doctoral journey more pleasant and effective.
+You want to develop these skills as soon as possible. Trust me. They will make your doctoral journey more pleasant.
 
 ------------------------------------------------------------------------
 
-*Bonus track---*This website is a public [GitHub repository](https://github.com/ealvaradomena/unofficial_primer). Feel free to fork it and use it as a model for your personal website.
+*Bonus track—*This website is deployed from a public [GitHub repository](https://github.com/ealvaradomena/unofficial_primer). Feel free to fork it and use it as a model for your personal website.

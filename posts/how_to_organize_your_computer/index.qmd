@@ -2,67 +2,49 @@
 title: "How to organize your computer to work with data"
 author: "Edwin Alvarado-Mena"
 date: "2024-11-14"
-categories: [working directory, RStudio projects, GitHub]
+categories: [working directory, RStudio project, GitHub]
 image: "image.jpg"
 ---
 
 ![[Photo: Chris Richards/University Communications]{.smallcaps}](image.jpg){fig-align="center" width="600"}
 
-Your computer cannot be a mess.
+Your computer should not be a mess.
 
-To efficiently work with data, you want to organize your computer in a certain way. Organizing your folders and files in that certain way will make things much more manageable.
+To work efficiently with data, you want to organize your computer in a certain way. The same applies to version control. To work efficiently with version control applications (don't panic if you ignore what version control is—We'll cover it soon), you want to organize your computer in a certain way.
 
-The same goes for version control. To efficiently work with version control applications (do not panic if you ignore what version control is---We will talk about it soon), you want to organize your computer in a certain way.
+Organizing your folders and files in *that certain way* will make everything much easier for you.
 
-# A model working directory
+# RStudio projects and working directories
 
-During your doctoral studies you will crunch numbers on a daily basis. In the SGPP, we typically program in R, a programming language for data analysis.
+You'll crunch numbers on a daily basis during your doctoral studies. Most SGPP folks are versed in R, a programming language for data analysis.
 
-R users are familiar with the concept of working directory. Indeed, there is a function that prints the working directory, `getwd()`.
+R users organize their work around a thing called **RStudio projects**. We'll show how to create RStudio projects soon, but let's begin by saying that RStudio projects are files with a particular extension: *.Rproj* files.
 
-The working directory is a folder.
+R users are also familiar with the concept of **working directory**. A working directory is just a folder on your computer where an *.Rproj* file is located.
 
-More specifically, the working directory is the folder where you must keep all the files (e.g., that CSV file with survey data you have to analyze) and scripts (text files where you write and save your code) relevant to the project in question.
+To be precise, the working directory is the folder where you should keep all the files (e.g., the CSV file containing some survey data), scripts (e.g., the text files where you write and save your code), and any input that is relevant to the RStudio project you're working on.
 
-Therefore, if you execute the `getwd()` function in the R console, R would print the path to the working directory, say, `/Users/edwinalvarado/Documents/r_projects/unofficial_primer`.
+Once again, the working directory is just a folder with an RStudio project inside. The RStudio project, an *.Rproj* file, and the working directory, a folder, share the same name.
 
-So, when it comes to folders and files organization, I suggest creating two folders in your computer, namely, *r_projects* and *github_projects*.
+R has a function that prints the current working directory's path: `getwd()`.
 
-You could locate both folders in *Documents*. In my case, the two paths look like this:
+If you execute the `getwd()` function in the R console, R would print the path of the current working directory, say, */Users/edwinalvarado/Documents/r_projects/unofficial_primer* is the folder where I keep all the elements that are required to render this website, which is itself an RStudio project under the name *unofficial_primer.Rproj*.
 
-1.  */Users/edwinalvarado/Documents/r_projects*.
+# Computer organization
 
-2.  */Users/edwinalvarado/Documents/github_projects*.
+Regarding folders and files organization, you should create two main folders on your computer, namely, *r_projects* and *github_projects*.
 
-You should gather in *r_projects* those R projects that you want to keep in your computer only. If you want to track changes using a version control tool like GitHub, the R project in question should go to *github_projects*.
+You can locate both folders right in your *Documents* folder. In my computer, these two folder paths look something like this:
 
-Let us focus on the *r_projects* folder.
+1.  */Users/edwinalvarado/Documents/**r_projects***.
 
-In *r_projects*, you want to have one specific folder (i.e., a working directory!) for each course, paper, or practice you are working on.
+2.  */Users/edwinalvarado/Documents/**github_projects***.
 
-To create the working directory for, say, POL 601, you follow these steps:
+You should gather all RStudio projects' working directories (i.e., folders) in the *r_projects* folder.
 
-1.  Open RStudio.
+In *r_projects*, you want to create one specific working directory (i.e., one specific folder) for each course or project (paper, study notes, dissertation, etc.) you work on.
 
-2.  Click on *File \> New Project*, which will open a new window.
-
-3.  Select *New Directory*.
-
-4.  Choose an appropriate *Directory name* (use underscores instead of whitespaces), say, *pol_601* or *pol601*.
-
-5.  Click on *Browse* and make sure to *Create project as subdirectory of* the *r_projects* folder.
-
-6.  Click on *Create Projec*t.
-
-After following the steps above, you will have created a new folder in *r_projects*.
-
-In my case, the folder's path would be like */Users/edwinalvarado/Documents/r_projects/pol601*. If I access the folder, I will see a file named *pol601.Rproj*, which is an RStudio project.
-
-The next time I have to program something related to POL 601, I just click on the RStudio project, *pol601.Rproj*, which will open RStudio.
-
-Most importantly, RStudio will open the working directory corresponding to POL 601, so I do not need to worry about setting the working directory manually.
-
-OK. You repeat these steps for each course, paper, or practice that comes along the way. At some point, you will have numerous working directories:
+At some point, you'll have a large number of working directories:
 
 1.  */Users/edwinalvarado/Documents/r_projects/**pol601***.
 
@@ -76,37 +58,79 @@ OK. You repeat these steps for each course, paper, or practice that comes along 
 
 6.  */Users/edwinalvarado/Documents/r_projects/**prospectus***.
 
-And so on...
+And so on... Hopefully, you'll become *this* systematic and professional when organizing your computer!
 
-To sum up, we have learned that R users organize their work around RStudio projects. We have learned how to create RStudio projects. And we have learned that creating an RStudio project results in a new working directory (i.e., a new folder) that we locate in the *r_projects* folders.
+The RStudio projects in the *r_projects* folder are local; that is, they exist in—and only in—your computer.
 
-The new working directory must have a certain structure. I recommend to create three sub-folders:
+On the other hand, if you want to load an RStudio project to GitHub so that you can share it with others or track changes using GitHub's version control tools, the working directory in question should instead go to the *github_projects* folder.
 
-1.  *r_projects/pol601/**data***, where you store the data of interest.
+# Creating RStudio projects
 
-2.  *r_projects/pol601/**scripts***, where you store the text files with the code that loads, wrangles, tidies, models, or visualizes the data.
+To create an RStudio project—and, thus, a working directory—for, say, POL 601, you follow these steps:
 
-3.  *r_projects/pol601/**output***, where you store wrangled data, model output (modeling data might be time-consuming, so you do not want to re-run models), or visualizations.
+1.  Open RStudio.
 
-If you create a Quarto document (I have a post about it), I suggest keeping it right in the working directory, not in sub-folders.
+2.  Click on *File \> New Project*, which will open a new window.
 
-I shared [a model working directory](https://github.com/ealvaradomena/class_repo) through GitHub. It looks like this:
+3.  Select *New Directory*.
 
-![A model working directory](model_working_directory.png){alt="A model working directory" fig-align="center" width="315"}
+4.  Choose an appropriate *directory_name* (use underscores instead of white spaces), say, *pol_601* or *pol601*.
 
-It is sensible to avoid deleting files. You never know if that trashy script will be useful in the future. Instead, you can create an *old* folder at any folder and place the old stuff there.
+5.  Click on *Browse* and make sure to set the *r_projects* folder in the *Create project as subdirectory of* field.
 
-# GitHub integration
+6.  Click on *Create Projec*t.
 
-Often, you want your R projects to be GitHub repositories.
+By completing the steps above, you'll create a new RStudio project and, hence, a new working directory in *r_projects*.
 
-[GitHub](https://github.com/) is a version control tool. Moreover, GitHub is a platform to share code with instructors, co-authors, and colleagues.
+Bear in mind that a working directory is just a folder containing an RStudio project.
 
-To keep all your GitHub repositories together, you must create a folder locally on your computer, *github_projects*. 
+In my case, as the example goes, the working directory's path would be */Users/edwinalvarado/Documents/r_projects/pol601*. There, in that folder, I'll find a *pol601.Rproj* file, which is an RStudio project.
 
-Of course, the first step is to create a GitHub account. The second step is to download GitHub Desktop.[^1]
+The next time I have to do some programming related to POL 601, I will simply click on its corresponding RStudio project: *pol601.Rproj*. RStudio will then open a new session rooted in the working directory corresponding to POL 601.
 
-[^1]: I suggest that you get used to running GitHub commands from the Terminal in RStudio. Using the Terminal approximates better the real-world jobs in the data science industry.
+Importantly, the good habit of organizing our work around RStudio projects guarantees that we don't need to worry about manually setting the working directory, which tends to be taxing for most beginners.
+
+::: callout-tip
+## More on RStudio projects? {data-link="Intro to GitHub"}
+
+[Here](https://support.posit.co/hc/en-us/articles/200526207-Using-RStudio-Projects)'s a reference with further details about RStudio projects.
+:::
+
+And you'll simply repeat this tutorial for every course or project that comes along the way in your new life as an R user.
+
+To sum up, we have learned that R users organize all their programming work around RStudio projects. We described how to create RStudio projects. We showed that creating an RStudio project results in a new working directory (i.e., a new folder) that we should locate in the *r_projects* folder to keep them all together.
+
+It is key to notice that the new working directory must also have a certain structure. You should create at least these three sub-folders:
+
+1.  *r_projects/pol601/**data***, where you store the raw data.
+
+2.  *r_projects/pol601/**scripts***, where you store the text files containing all the programming that loads, wrangles, tidies, models, or visualizes the data.
+
+3.  *r_projects/pol601/**output***, where you store wrangled data, model output (modeling data might be time-consuming, so you don't want to re-run models again and again), visualizations, etc.
+
+When you create a Quarto document to produce a PDF report (I have a post about it), instead of creating a sub-folder for reports, I suggest keeping that *.qmd* file right at the root of the working directory.
+
+I shared [a model working directory](https://github.com/ealvaradomena/class_repo) via GitHub. It looks like this:
+
+![A model working directory](model_working_directory.png){fig-align="center" width="315"}
+
+As you see, rendering a PDF document like *assignment_1.pdf* yielded a host of ancillary files with the same prefix, *assignment_1*, making the working directory seem packed. However, I still suggest that beginners keep the *.qmd* file at the root—rather than moving it to a sub-folder—for convenience when setting relative paths within the Quarto document. I don't want to get technical about it, so please just trust me!
+
+Finally, it is sensible to avoid file deletion. You never know whether that trashy script you're about to delete will have a last dance in the future. Instead of deleting, you create an *old* sub-folder in the same folder where the junk file is and move it there along with any other old stuff.
+
+# Creating GitHub repositories
+
+Often, you want your RStudio projects to be GitHub repositories as well. Why do we care about GitHub this much? Because GitHub is such a great asset!
+
+[GitHub](https://github.com/) is a version control tool, meaning that you can recover previous coding versions. Because GitHub is in the cloud, you don’t have to stress about your computer getting stolen or messed up. All your programming is safe at GitHub! Furthermore, GitHub is handy to share code with instructors, co-authors, and colleagues.
+
+We all love GitHub! It has a relatively steep learning curve, though.
+
+To keep all your GitHub repositories together, as mentioned earlier, you must create a folder on your computer, *github_projects*. 
+
+Of course, you must also create a GitHub account and download GitHub Desktop.[^1]
+
+[^1]: I suggest that you get used to running GitHub commands in the RStudio's Terminal. Using the Terminal approximates better the real-world jobs in the data science industry.
 
 ::: callout-tip
 ## Intro to GitHub
@@ -114,7 +138,7 @@ Of course, the first step is to create a GitHub account. The second step is to d
 You need a solid introduction to Git and GitHub. My recommended resources, [here](https://swcarpentry.github.io/git-novice/) and [here](https://www.youtube.com/watch?v=Oaj3RBIoGFc).
 :::
 
-The steps go as follows:
+The next steps are to create a GitHub repository and populate it with an RStudio project:
 
 1.  Log in to the [GitHub](https://github.com) website.
 
@@ -122,13 +146,13 @@ The steps go as follows:
 
 3.  Click on *Your repositories*.
 
-4.  Click on *New* (green bottom) to create a new repository.
+4.  Click on *New* (a green button) to create a new repository.
 
-5.  Choose an appropriate name (say, *pol601*) and make sure that the repository is private.
+5.  Choose an appropriate name (say, *pol601*) and make sure that the repository is set to be private.
 
 6.  Click on *Create repository*, which will lead you to the main page of the new repository.
 
-7.  Click on *Code* (green bottom).
+7.  Click on *Code* (a green button).
 
 8.  Click on *Local*.
 
@@ -136,20 +160,22 @@ The steps go as follows:
 
 10. In GitHub Desktop, click on *Browse* and make sure that the repository will be located in the *github_projects* folder.
 
-Having reached this point, the repository should exist locally on your computer and, more specifically, in the *github_projects* folder.
+The GitHub repository now exists locally on your computer and, more specifically, is located in the *github_projects* folder.
 
-Now it is time to populate *github_projects/pol601*.
+Now, it is time to populate that *github_projects/pol601* folder with an RStudio project.
+
+So you follow the following steps:
 
 1.  Open RStudio.
 
 2.  Click on *File \> New Project*, which will open a new window.
 
-3.  Select *Existing Directory* (instead of *New Directory*, as we did it in the previous section).
+3.  Select *Existing Directory* (instead of *New Directory*, which we chose when creating an RStudio on your computer only).
 
-4.  Click on *Browse* and make sure to choose the *github_projects/pol601* folder.
+4.  Click on *Browse* and make sure to choose the *github_projects/pol601* folder (an existing directory as you created it in advance).
 
 5.  Click on *Create Projec*t.
 
-Thus, you will have created a new folder in *github_projects* that is both an RStudio project and a GitHub repository.
+Thus, you'll have created a new folder in *github_projects* that is both an RStudio project and a GitHub repository.
 
-You are all set to program great things and exploit the benefits of version control!
+Job done! You are all set to program great stuff and exploit GitHub's strenghts in version control and cloud sharing. Here's where you need a solid [Intro to GitHub].

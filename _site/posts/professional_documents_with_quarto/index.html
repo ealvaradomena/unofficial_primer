@@ -208,33 +208,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption class="figure-caption margin-caption"><span class="smallcaps">Photo: Bob Demers/UA News</span></figcaption>
 </figure>
 </div>
-<p>Producing high-quality documents and reports is of paramount importance.</p>
-<p>Methods courses’ assignments are especially tricky as you have to combine plain text, code, and results.</p>
-<p>Even if you are not minoring in methods, you must take a few statistics courses along your doctoral journey.</p>
-<p>In general, instructors will expect to see, say, a table with regression coefficients and other statistics. You must also discuss your data, methods, and findings.</p>
-<p>OK. You will then look for a text editor. Microsoft Word or Google Docs may be your immediate options.</p>
-<p>So, you create a new document, write some paragraphs about the research design, and insert screenshots of the relevant figures and tables.&nbsp;</p>
+<p>Producing high-quality documents and reports is of paramount importance during your PhD life.</p>
+<p>Even if you are not minoring in methods, you must take a few statistics courses along your doctoral journey at the SGPP.</p>
+<p>Methods courses’ assignments are especially tricky as you must combine plain text, code, and results.</p>
+<p>In general, instructors will expect to see, say, a fancy table with regression coefficients and other statistics. But you must also discuss your data, methods, and findings.</p>
+<p>OK. You’ll then look for a text editor. Microsoft Word or Google Docs may be your immediate choices.</p>
+<p>So, you create a new Microsoft Word document, write some paragraphs about research design, insert screenshots of the relevant figures and tables, etc.&nbsp;</p>
 <p>Screenshots, however, do not look very professional…</p>
-<p>To make things worse, instructors will also want to see code. Technical questions will be asked. How did you wrangle the data? How did you fit the models?</p>
-<p>Therefore, you must showcase your code.</p>
-<p>Once again, you might be tempted to take screenshots of RStudio and insert them into the document.</p>
-<p>Screenshots, however, do not look very professional…</p>
-<p>We need better solutions for scientific writing than Microsoft Word or Google Docs.</p>
+<p>To make things worse, instructors will often want you to showcase your programming thinking. Technical questions will be asked. How did you wrangle the data? How did you set the relevant variables? How did you fit the models?</p>
+<p>Therefore, you must add code to your prose.</p>
+<p>You might be tempted to take screenshots of the R console and insert them into the document.</p>
+<p>Once again, copy-pasting screenshots is not very professional…</p>
+<p>We need tools that are better than Microsoft Word or Google Docs for high-quality scientific writing.</p>
 <section id="a-model-quarto-document" class="level1">
 <h1>A model Quarto document</h1>
-<p>Luckily, we have Quarto!</p>
-<p>Quarto is an open-source tool for scientific publishing. Quarto documents can combine plain text, code, and code output. No need for screenshots!</p>
-<p>Quarto documents can be rendered to multiple formats, including PDF, which makes them great for assignments.</p>
+<p>Luckily, we have Quarto documents!</p>
+<p>Quarto is an open-source software for scientific publishing. It is included in RStudio—You don’t have to install anything else.</p>
+<p>Quarto documents can combine plain text, code, and code output. No need for screenshots.</p>
+<p>Plus, Quarto documents can be rendered into multiple formats, including PDF, which makes them great for PhD assignments.</p>
 <p>You can create Quarto documents in RStudio by clicking <em>File</em> &gt; <em>New File</em> &gt; <em>Quarto Document</em>.</p>
-<p>Thus, RStudio will open a Quarto document where you can write, program, and render to a professionally-looking PDF document.</p>
-<p>You will see YAML metadata at the top of the Quarto document that you can modify at will. This metadata provides a lot of room for customization.</p>
-<p>To make things easier, I have granted you access to a GitHub repository with <a href="https://github.com/ealvaradomena/class_repo">a model Quarto document</a> ready to be rendered into PDF format.&nbsp;Feel free to use this repository as a model for your grad school work.</p>
-<p>Notice that the repository follows the guidelines for working directory organization that I listed in another <a href="https://unofficialprimer.netlify.app/posts/how_to_organize_your_computer/">blog post</a>.</p>
-<p>As you will see in the model repository, cool things about Quarto include printing code and code output, including references, and inserting <span class="math inline">\(\LaTeX\)</span> math.</p>
+<p>RStudio will open a Quarto document where you can write, program, and render into a professionally-looking PDF document.</p>
+<p>You’ll see a block of YAML metadata at the top of the Quarto document. YAML metadata provides a lot of room for customization. You can modify those parameters at will.</p>
+<p>To make things easier, I have granted you access to a GitHub repository with <a href="https://github.com/ealvaradomena/class_repo">a model Quarto document</a> ready to be rendered into a PDF file.&nbsp;Feel free to use this repository as a model for your grad school submissions.</p>
+<p>Notice that this GitHub repository follows the guidelines for working directory organization I listed in another <a href="https://unofficialprimer.netlify.app/posts/how_to_organize_your_computer/">blog post</a>.</p>
+<p>As you’ll see, Quarto makes it possible to do cool things such as printing both code and code output, managing references, and inserting <span class="math inline">\(\LaTeX\)</span> math.</p>
 </section>
-<section id="r-vs-python-why-not-both" class="level1">
-<h1>R vs Python? Why not both!</h1>
-<p>You can even combine R and Python chunks! Have a look:</p>
+<section id="r-or-python-why-not-both" class="level1">
+<h1>R or Python? Why not both!</h1>
+<p>You can even combine R and Python chunks in Quarto! Have a look:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="do">## This is R</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="fu">toupper</span>(<span class="st">"hola"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -262,7 +263,7 @@ Install package
 <pre><code>'HOLA'</code></pre>
 </div>
 </div>
-<p>Furthermore, you can call objects from an R environment while programming in a Python chunk, and vice-versa, which means that you can build “bilingual” workflows:</p>
+<p>Furthermore, you can call objects from an R environment while programming in a Python chunk, and vice-versa, which means that you can build bilingual workflows:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="do">## This is R</span></span>
 <span id="cb5-2"><a href="#cb5-2"></a>string <span class="ot">&lt;-</span> <span class="st">"hola"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -274,15 +275,16 @@ Install package
 <pre><code>'HOLA'</code></pre>
 </div>
 </div>
-<p>In Quarto, you can switch between R and Python, making the most of both languages. This feature is truly awesome! It dramatically enhances productivity.</p>
-<p>Let us say that your data-wrangling skills are quite good in R because of your mastery of the <code>dplyr</code> package. It may be that you are working on a project that requires Natural Language Processing libraries that exist in Python only. There is no need to make tough decisions. Quarto lets you use both!</p>
+<p>So you can switch between R and Python, making the most of both languages. This feature is truly awesome! It has dramatically enhanced my productivity.</p>
+<p>Let’s say that your data-wrangling skills are quite good in R because of your mastery of the <code>dplyr</code> package. It may be the case that you’re working on a project that requires Natural Language Processing (NLP) libraries that exist in Python only. Quarto lets you combine both languages! There’s no need to make tough decisions.</p>
 </section>
 <section id="other-uses" class="level1">
 <h1>Other uses</h1>
-<p>Of course, you can render fancy documents in Quarto even if equations or coding are not involved.</p>
-<p>You could write your comprehensive examination or your prospectus in Quarto, and those documents will have a unique look that speaks volumes about your professionalization (trust me, demonstrating professionalization is critical in grad school!).</p>
-<p>You could create your personal website in Quarto. Actually, this blog is made with Quarto. The <a href="https://github.com/ealvaradomena/unofficial_primer">GitHub repository</a> is public, so feel free to fork it!</p>
-<p>There is a detailed user guide to Quarto. You can visit it <a href="https://quarto.org/">here</a>. If you have questions about Quarto’s many functionalities, this is the first place you should look.&nbsp;</p>
+<p>Of course, you can render fancy documents in Quarto even if equations or programming are not involved.</p>
+<p>You could write your comprehensive examination or your prospectus in Quarto. Those documents will have a unique look that speaks volumes about your professionalization (trust me, demonstrating professionalization is critical in grad school).</p>
+<p>And you could create your personal website in Quarto. Actually, this blog is made with Quarto—The <a href="https://github.com/ealvaradomena/unofficial_primer">GitHub repository</a> is public, so please feel free to fork it.</p>
+<p>There’s a detailed user guide to Quarto. You can visit it <a href="https://quarto.org/">here</a>. If you have questions about Quarto’s many uses, this is the first place you should look.&nbsp;</p>
+<p>I hope you fall in love with Quarto as much as I have.</p>
 
 
 </section>
